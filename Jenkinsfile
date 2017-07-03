@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('echo') {
       steps {
+        echo 'master2'
         echo 'master'
       }
     }
