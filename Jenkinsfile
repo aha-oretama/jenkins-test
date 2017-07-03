@@ -4,4 +4,5 @@ pipeline {
     step('echo') {
       echo 'master'
     }
+  }
 }
