@@ -7,6 +7,7 @@ pipeline {
     stage('echo') {
       steps {
         sh 'sleep 300'
+        sh 'sleep 300'
       }
     }
   }
