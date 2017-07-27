@@ -3,13 +3,13 @@ pipeline {
   options {
     disableConcurrentBuilds()
   }
+  lock('test') {
+  }
   stages {
     stage('echo') {
-      lock('test') {
-        steps {
-          sh 'sleep 300'          
-        }
-      }    
+      steps {
+        sh 'sleep 300'          
+      }
     }
   }
 }
