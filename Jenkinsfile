@@ -1,3 +1,4 @@
+lock('test') {
 pipeline {
   agent any
   options {
@@ -11,4 +12,5 @@ pipeline {
       }
     }
   }
+}
 }
