@@ -5,11 +5,11 @@ pipeline {
   }
   stages {
     stage('echo') {
-      steps {
-        lock('test') {
-        sh 'sleep 300'
+      lock('test') {
+        steps {
+          sh 'sleep 300'          
         }
-      }
+      }    
     }
   }
 }
