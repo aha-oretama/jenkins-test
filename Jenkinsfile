@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage('echo') {
       steps {
+        lock('test') {
         sh 'sleep 300'
+        }
       }
     }
   }
