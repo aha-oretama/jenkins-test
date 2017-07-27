@@ -1,3 +1,11 @@
+stage('wait') {
+  lock('test') {
+    node {
+      echo 'start'
+    }
+  }
+}
+
 pipeline {
   agent any
   options {
