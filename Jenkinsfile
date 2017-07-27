@@ -1,21 +1,8 @@
 stage('wait') {
-  lock('test') {
+  disableConcurrentBuilds()
+  timestamps {
     node {
-      echo 'start'
-    }
-  }
-}
-
-pipeline {
-  agent any
-  options {
-    disableConcurrentBuilds()
-  }
-  stages {
-    stage('echo') {
-      steps {
-        sh 'sleep 300'          
-      }
-    }
+      sh 'sleep 300'
+      sh 'sleep 300'
   }
 }
