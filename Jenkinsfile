@@ -1,8 +1,8 @@
 stage('wait') {
   lock('test') {
-    node {
-      disableConcurrentBuilds {
-        timestamps{
+  disableConcurrentBuilds {
+    timestamps{
+        node {
           sh 'sleep 300'
           sh 'sleep 300'
         }
