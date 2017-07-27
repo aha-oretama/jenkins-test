@@ -4,5 +4,6 @@ stage('wait') {
     node {
       sh 'sleep 300'
       sh 'sleep 300'
+    }
   }
 }
