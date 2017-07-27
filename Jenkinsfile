@@ -1,12 +1,12 @@
 pipeline {
   agent any
+  options {
+    disableConcurrentBuilds()
+  }
   stages {
     stage('echo') {
       steps {
-        echo 'master4'
-        echo 'master2'
-        echo 'master'
-        echo 'master3'
+        sh 'sleep 300'
       }
     }
   }
