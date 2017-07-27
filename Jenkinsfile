@@ -1,9 +1,15 @@
+stage('wait') {
+  lock('test') {
+    node {
+      echo 'start'
+    }
+  }
+}
+
 pipeline {
   agent any
   options {
     disableConcurrentBuilds()
-  }
-  lock('test') {
   }
   stages {
     stage('echo') {
